@@ -2325,12 +2325,14 @@
                     </p>
                     
                     <div id="newsletter_form">
-                        <form action="mailto:nanaryuu@gmail.com" method="post" class="subscribe-form" id="subscribe-form">
+                        <form action="http://http://www.columbia.edu/~lm2773/sendresults.php" method="post" enctype="text/plain" class="subscribe-form" id="subscribe-form">
                             <input type="email" name="email" class="subscribe-input" placeholder="Enter your e-mail address..."  required>
                                 <button type="submit" class="subscribe-submit">Notify Me</button>
                         </form>
                     </div>
                     <div id="preview"></div>
+                    <div><p id="submit-result">
+                    </p></div>
                     
                 </div>
             </div>
@@ -2377,6 +2379,11 @@
                     }
                 });
             });
+    </script>
+    <script type="text/javascript">
+        $('.subscribe-submit').click(function() {
+            $('#submit-result').text("Thanks for signing up!")
+        })
     </script>
         
   </body>
