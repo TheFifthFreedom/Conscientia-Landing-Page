@@ -1,16 +1,6 @@
 <?php
 //--------------------------Set these paramaters--------------------------
 
-function debug_to_console( $data ) {
-
-    if ( is_array( $data ) )
-        $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
-    else
-        $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
-
-    echo $output;
-}
-
 // Subject of email sent to you.
 $subject = 'Results from Contact form'; 
 
@@ -23,8 +13,8 @@ $emailadd = 'nanaryuu@gmail.com';
 // --------------------------Do not edit below this line--------------------------
 $space = ' ';
 $email = $HTTP_POST_VARS['email'];
-debug_to_console($email)
+error_log( $email )
 $text = "New subscriber:$space{$email}";
 if (mail($emailadd, $subject, $text, 'From: Conscientia'))
-{debug_to_console("success")};
+{error_log("Success")};
 ?>
