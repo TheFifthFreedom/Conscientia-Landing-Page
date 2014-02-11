@@ -2325,14 +2325,12 @@
                     </p>
                     
                     <div id="newsletter_form">
-                        <form action="sendresults.php" method="post" enctype="text/plain" class="subscribe-form" id="subscribe-form">
+                        <form action="insert.php" method="post" enctype="text/plain" class="subscribe-form" id="subscribe-form">
                             <input type="email" name="email" class="subscribe-input" placeholder="Enter your e-mail address..."  required>
                                 <button type="submit" class="subscribe-submit">Notify Me</button>
                         </form>
                     </div>
                     <div id="preview"></div>
-                    <div><p id="submit-result">
-                    </p></div>
                     
                 </div>
             </div>
@@ -2373,17 +2371,14 @@
         $('document').ready(function(){
                 $('#subscribe-form').ajaxForm( {
                 target: '#preview',
-                // success: function() { 
-                //       $('#subscribe-form').slideUp('slow');
-                //       $('#preview').css({"opacity":"1"});
-                //     }
+                success: function() { 
+                      $('#subscribe-form').slideUp('slow');
+                      $('#preview').css({"opacity":"1"});
+                      $('#preview').css({"font-family": 'Source Sans Pro'});
+                      $('#preview').text("Thanks for signing up!");
+                    }
                 });
             });
-    </script>
-    <script type="text/javascript">
-        $('.subscribe-submit').click(function() {
-            $('#submit-result').text("Thanks for signing up!")
-        })
     </script>
         
   </body>
