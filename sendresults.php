@@ -11,17 +11,8 @@ $emailadd = 'nanaryuu@gmail.com';
 // $url = 'http://www.columbia.edu/~lm2773/confirmation.html';
 
 // --------------------------Do not edit below this line--------------------------
-$text = "Results from form:\n\n"; 
 $space = ' ';
 $email = $HTTP_POST_VARS['email'];
-$j = strlen($key);
-if ($j >= 50)
-{echo "Name of form element $key cannot be longer than 50 characters";die;}
-$j = 50 - $j;
-for ($i = 1; $i <= $j; $i++)
-{$space .= ' ';}
-$conc = "New subscriber:$space{$email}";
-$text .= $conc;
-$space = ' ';
-mail($emailadd, $subject, $text, 'From: '.$emailadd.'');
+$text = "New subscriber:$space{$email}";
+mail($emailadd, $subject, $text, 'From: Conscientia');
 ?>
