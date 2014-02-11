@@ -8,7 +8,7 @@ $subject = 'Results from Contact form';
 $emailadd = 'nanaryuu@gmail.com'; 
 
 // Where to redirect after form is processed. 
-// $url = 'http://http://www.columbia.edu/~lm2773/confirmation.html'; 
+// $url = 'http://www.columbia.edu/~lm2773/confirmation.html'; 
 
 // Makes all fields required. If set to '1' no field can not be empty. If set to '0' any or all fields can be empty.
 $req = '1'; 
