@@ -7,7 +7,7 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-$sql="INSERT INTO Emails (email)
+$sql="INSERT INTO emails (email)
 VALUES
 ('$_POST[email]')";
 
