@@ -20,8 +20,8 @@
 // mysqli_close($con);
 
 $dbhost = "localhost";
-$dbuser = "TheSixthLiberty";
-$dbpass = "orfpWNasYWCP4FcLEFRkfvv4qANqui";
+$dbuser = "laurent";
+$dbpass = "meteora100";
 $dbname = "Conscientia";
 $c = @mysql_pconnect($dbhost,$dbuser,$dbpass) or die();
 @mysql_select_db($dbname,$c) or die();
